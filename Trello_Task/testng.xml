@@ -1,0 +1,12 @@
+<suite name="trello test">
+
+  <test name="trello test" >
+
+    <classes>
+       <class name="tellotest.TrelloTest" />
+    </classes>
+  </test>
+  
+
+  
+</suite>

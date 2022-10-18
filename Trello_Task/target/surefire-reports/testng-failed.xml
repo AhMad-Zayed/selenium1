@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [trello test]" verbose="0">
+  <test thread-count="5" name="trello test(failed)" verbose="0">
+    <classes>
+      <class name="tellotest.TrelloTest">
+        <methods>
+          <include name="uploadFile"/>
+          <include name="beforeClass"/>
+          <include name="boardEnterAndCreateList"/>
+        </methods>
+      </class> <!-- tellotest.TrelloTest -->
+    </classes>
+  </test> <!-- trello test(failed) -->
+</suite> <!-- Failed suite [trello test] -->
