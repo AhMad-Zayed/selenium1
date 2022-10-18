@@ -1,9 +1,12 @@
 package testngBooking;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -14,6 +17,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import io.qameta.allure.Allure;
 import readFile.ReadWriteExcelFile;
 
 public class BookingTest {
@@ -54,7 +59,7 @@ public class BookingTest {
 
 		driver.findElement(By.id("submit_button")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
+		Allure.addAttachment("Hotel Name", new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
 		 hotelName = driver.findElement(By.xpath("//h2[@Class='uitk-heading uitk-heading-5 overflow-wrap']")).getText();
 		reviewNum = driver
 				.findElement(
@@ -63,6 +68,7 @@ public class BookingTest {
 		 reviewText = driver.findElement(By.xpath("//span[2][@Class='uitk-spacing uitk-spacing-padding-inlineend-one']"))
 				.getText();
 		 review = reviewNum + " " + reviewText;
+		Allure.addAttachment("Hotel Page", new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
 
 		ReadWriteExcelFile.writeFile(city, checkIn, checkOut, hotelName, review);
 
