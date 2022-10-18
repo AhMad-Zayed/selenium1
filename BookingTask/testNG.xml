@@ -1,0 +1,7 @@
+<suite name="BookingTask">
+	<test name="Task" >
+		<classes>
+			<class name="testngBooking.BookingTest"/>
+    	</classes>
+	</test>
+</suite>
