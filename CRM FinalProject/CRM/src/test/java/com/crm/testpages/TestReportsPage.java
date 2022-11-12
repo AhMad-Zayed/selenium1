@@ -25,16 +25,6 @@ public class TestReportsPage extends ReportsPage {public TestReportsPage() throw
 	public void newCallStatusTest(Method method) {
 		goToReportsPage();
 		assertTrue(reportsPagestatus(), "Error: you are not in the ReportsPage");
-	}
-	
-//	@Test(dataProvider = "getData")
-//	public void newcallDataTest(String date, String reminderTime, String noteValue, String contactName,
-//			String companyName, String flagVal, String noteBox) {
-//		moveCallPage();
-//		goToCallPage();
-//		addNewCall(date, reminderTime, noteValue, contactName, companyName, flagVal, noteBox);
-//	
-//	}
 	
 	@AfterMethod
 	public void afterMethod(Method method) throws IOException {
