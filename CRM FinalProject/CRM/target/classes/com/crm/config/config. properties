@@ -1,0 +1,12 @@
+URL = https://classic.freecrm.com/index.html
+expectedTitle =Free CRM - CRM software for customer relationship management, sales, and support.
+# Start Login Test Cases 
+userName =ahmadtest
+password =123456
+test1USR =123456
+test1Pass =ahmadtest
+test2USR =ahmadtest
+test2Pass =ahmadtest
+test3USR= 
+test3Pass= 
+# End Login Test Cases 			   
